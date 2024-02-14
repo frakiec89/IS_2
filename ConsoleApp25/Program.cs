@@ -1,49 +1,22 @@
 ﻿// track
 
+using ConsoleApp25;
+
+User us = new User();
+User us1 = new User("Vasy");
+User us2 = new User("Kosttya" , 18);
 
 
-// test 
+us2.NextAge(5);
+us1.NextAge();
 
 
-// test 
 
 
-// test 
+Console.WriteLine(us.Name + " " + us.Age);
+Console.WriteLine(us1.Name + " " + us1.Age);
+Console.WriteLine(us2.Name + " " + us2.Age);
 
 
-// test 
 
-string fileName = "pass.txt";
-
-string password;
-
-if (File.Exists(fileName))
-{
-    password = File.ReadAllText(fileName);
-}
-else
-{
-    File.Create(fileName).Close();
-    password = Registration();
-}
-
-Console.WriteLine("Введите пароль");
-
-if(Console.ReadLine () == password)
-{
-    Console.WriteLine("Доступ  разрешен");
-}
-else
-{
-    Console.WriteLine("Доступ не разрешен");
-}
-
-
-string Registration()
-{
-    Console.WriteLine("регистрация в  системе");
-    Console.WriteLine("введите пароль");
-    string pas = Console.ReadLine();
-    File.WriteAllText(fileName, pas);
-    return pas;
-}
+Console.WriteLine();
