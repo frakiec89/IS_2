@@ -1,6 +1,6 @@
 ﻿// track
 
-using System.Diagnostics.SymbolStore;
+
 
 namespace ConsoleApp25
 {
@@ -17,7 +17,7 @@ namespace ConsoleApp25
             Name = "NoName";
             Age = 0;
         }
-        public  User ( string name )
+        public User ( string name )
         {
             Name = name;
             Age = 0;
